@@ -1,5 +1,5 @@
-const projects = state => state.projects;
+const bookings = state => state.bookings;
 
 export default {
-  projects
+  bookings
 };

@@ -12,6 +12,7 @@
       </v-card-actions>
       <v-card-actions>
         <v-text-field label="Password"
+                      type="password"
                       required
                       filled
                       rounded

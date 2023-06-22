@@ -50,4 +50,8 @@ export default {
 .super-padding {
   padding: 30px !important;
 }
+
+.v-text-field input {
+  background-color: #f3f4f7 !important;
+}
 </style>

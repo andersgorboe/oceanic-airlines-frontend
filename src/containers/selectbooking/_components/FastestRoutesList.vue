@@ -7,6 +7,9 @@
           Booked
         </th>
         <th class="text-left pa-2">
+          Time
+        </th>
+        <th class="text-left pa-2">
           From
         </th>
         <th class="text-left pa-2">
@@ -18,16 +21,33 @@
         <th class="text-left pa-2">
           price
         </th>
+        <th class="text-left pa-2">
+          Weight
+        </th>
+        <th class="text-left pa-2">
+          Dimention
+        </th>
+        <th class="text-left pa-2">
+          Company
+        </th>
+        <th class="text-left pa-2">
+          Distance
+        </th>
       </tr>
       </thead>
       <tbody>
-      <tr v-for="item in items" :key="item.id">
+      <tr v-for="item in bookings" :key="item.id">
         <td class="pa-2">{{ item.booked }}</td>
+        <td class="pa-2">{{ item.time }}</td>
         <td class="pa-2">{{ item.from }}</td>
         <td class="pa-2">{{ item.to }}</td>
         <td class="pa-2">{{ item.time }}</td>
-        <td class="pa-2">{{ item.price }}</td>
-        <v-btn @click="orderRoute(item.id)">Select</v-btn>
+        <td class="pa-2">${{ item.price }}</td>
+        <td class="pa-2">{{ item.weight }}kg</td>
+        <td class="pa-2">{{ item.dimention }}</td>
+        <td class="pa-2">{{ item.company }}</td>
+        <td class="pa-2">{{ item.distance }}</td>
+        <v-btn @click="orderRoute(item)">Select</v-btn>
       </tr>
       </tbody>
     </v-table>
@@ -35,39 +55,31 @@
 </template>
 
 <script>
+import {mapActions} from "vuex";
+
 export default {
   name: "ShortestRoutesList",
   methods: {
-    orderRoute(id) {
+    ...mapActions('$_booking', ['updateBookings']),
+    orderRoute(item) {
       // TODO: Implement call to backend to order the item
-      return id
+      this.updateBookings(item)
+      this.$router.push({ name: 'Dashboard' });
     }
   },
   data: () => ({
-    items: [
+    bookings: [
       {
-        "id": 1,
-        "booked": "20.06.2023",
-        "from": "Roma",
-        "to": "Tripoli",
-        "time": 1,
-        "price": 1300
-      },
-      {
-        "id": 2,
-        "booked": "15.06.2023",
-        "from": "Oslo",
-        "to": "Berlin",
-        "time": 2,
-        "price": 1700
-      },
-      {
-        "id": 3,
-        "booked": "25.06.2023",
-        "from": "Laos",
-        "to": "Las Vegas",
-        "time": 2,
-        "price": 1300
+        "id": 10,
+        "booked": "24-06-2023",
+        "time": "14:00",
+        "from": "Tanger",
+        "to": "Sierra Leone",
+        "weight": 1,
+        "dimention": "Small",
+        "company": "Oceanic Airlines",
+        "distance": 2,
+        "price": 80
       }
     ],
   }),

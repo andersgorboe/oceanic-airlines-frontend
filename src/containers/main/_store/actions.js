@@ -1,27 +1,28 @@
 // import ApiClient from '../_api';
 // eslint-disable-next-line no-unused-vars
-import { RESET_BASE_STATE, UPDATE_PROJECTS } from './mutations';
+import { RESET_BASE_STATE, UPDATE_BOOKINGS } from './mutations';
 
-export const fetchProjects = 'fetchProjects';
+export const fetchOrders = 'fetchOrders';
 export const resetBaseState = 'resetBaseState';
+export const updateBookings = 'updateBookings';
 
 // const apiClient = new ApiClient();
 
 export default {
   // eslint-disable-next-line no-unused-vars
-  async [fetchProjects](context) {
+  async [fetchOrders](context) {
     try {
       // const data = await apiClient.fetchProjects();
-      const data = [
-        {"id":1,"title":"Activity 1","dueDate":"2023-06-22T13:17:56.3810676+00:00","completed":false},
-        {"id":2,"title":"Activity 2","dueDate":"2023-06-22T13:17:56.3810676+00:00","completed":true}
-      ]
-      context.commit(UPDATE_PROJECTS, data);
+      // context.commit(UPDATE_ORDERS, data);
 
       return Promise.resolve();
     } catch (error) {
       return Promise.reject(error);
     }
+  },
+
+  [updateBookings](context, data) {
+    context.commit(UPDATE_BOOKINGS, data)
   },
 
   [resetBaseState](context) {

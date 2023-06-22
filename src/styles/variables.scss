@@ -9,8 +9,18 @@ h1 {
   color: #223B8D !important;
   font-size: 1.5rem !important;
   font-weight: 700 !important;
-  border-bottom: 1px solid #E9EBF4;
-  margin-bottom: 30px !important;
+  margin-bottom: 10px !important;
+}
+h2 {
+  font-weight: 500 !important;
+  font-size: 1.2rem !important;
+  margin: 30px 0px 0px !important;
+}
+h3 {
+  font-weight: 500 !important;
+  font-size: 1.2rem !important;
+  margin: 0px 0px 10px !important;
+  border-bottom: 1px solid #E9EBF4 !important;
 }
 
 /*Login page*/
@@ -30,6 +40,14 @@ h1 {
 }
 .v-btn:not(.v-btn--round).v-size--large {
   height: 60px !important;
+}
+.v-application .elevation-8 {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.v-application a {
+  color: #CDCDCD !important;
+  font-size: 0.8rem !important;
 }
 
 /*Header*/
@@ -53,6 +71,15 @@ tr:nth-child(even) {
 }
 td.pa-2 {
   color: #4D4D4D !important;
+  padding: 24px !important;
+}
+v-table {
+  border: 1px solid #e9ebf4 !important;
+  display: inline-block !important;
+  padding-top: 10px !important;
+}
+th.text-left.pa-2 {
+  border-bottom: 1px solid #E9EBF4 !important;
 }
 
 /*New booking*/
@@ -60,6 +87,31 @@ td.pa-2 {
   color: #E9EBF4 !important;
   caret-color: #E9EBF4 !important;
 }
+.col-4, .col-5 {
+  margin: 0px 0px 30px 0px !important;
+}
+.v-label {
+  padding-left: 10px !important;
+}
+.theme--light.v-btn.v-btn--has-bg {
+  background-color: #223B8D !important;
+  color: #FFFFFF !important;
+  margin-top: 10px !important;
+}
 label.v-label.v-label--active.theme--light {
-  color: #ffffff !important;
+  color: #E9EBF4 !important;
+}
+.theme--light.v-btn.v-btn--has-bg {
+  background-color: #223B8D !important;
+  color: #FFFFFF !important;
+  border-radius: 10px !important;
+  padding: 24px !important;
+}
+.v-btn--is-elevated {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.v-application .pa-2 {
+  padding: 24px !important;
 }
