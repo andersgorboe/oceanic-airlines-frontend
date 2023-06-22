@@ -3,7 +3,6 @@
     <v-content>
       <router-view></router-view>
     </v-content>
-    <v-footer class="background"></v-footer>
   </v-app>
 </template>
 

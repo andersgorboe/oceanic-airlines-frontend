@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="super-padding">
     <TheHeader />
     <BookingOverview />
     <Footer />
@@ -46,4 +46,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.super-padding {
+  padding: 30px !important;
+}
+</style>

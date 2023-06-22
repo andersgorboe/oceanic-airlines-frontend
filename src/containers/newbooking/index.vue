@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="super-padding">
     <TheHeader />
     <h1>New booking</h1>
     <BookingForm />
@@ -20,5 +20,7 @@ export default {
 </script>
 
 <style scoped>
-
+.super-padding {
+  padding: 30px !important;
+}
 </style>

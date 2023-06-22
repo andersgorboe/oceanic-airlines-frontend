@@ -70,7 +70,7 @@
         <v-btn @click="cancelBooking">Cancel</v-btn>
       </v-col>
       <v-col cols="4">
-        <v-btn @click="saveBooking">Save Booking</v-btn>
+        <v-btn @click="findBooking">Find Booking</v-btn>
       </v-col>
       <v-col cols="2"></v-col>
     </v-row>
@@ -84,15 +84,13 @@ export default {
     cancelBooking() {
       this.$router.push({ name: 'Dashboard' });
     },
-    saveBooking() {
-      // TODO: Add save booking stuff
-      this.$router.push({ name: 'Dashboard' });
-      alert("Booking successfully created.");
+    findBooking() {
+      // TODO: Add find booking stuff
+      this.$router.push({ name: 'SelectBooking' });
     }
   }
 }
 </script>
 
 <style scoped>
-
 </style>

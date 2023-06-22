@@ -3,3 +3,63 @@ $font-family: 'Work Sans', serif;
 $body-font-family: 'Work Sans', serif;
 $heading-font-family: 'Work Sans', serif;
 $border-radius-root: 4px;
+
+/*Global*/
+h1 {
+  color: #223B8D !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  border-bottom: 1px solid #E9EBF4;
+  margin-bottom: 30px !important;
+}
+
+/*Login page*/
+.v-sheet.v-card {
+  border-radius: 20px !important;
+  max-width: 400px !important;
+}
+.theme--dark.v-btn.v-btn--has-bg {
+  background-color: #223B8D !important;
+  border-radius: 10px !important;
+}
+.v-text-field--rounded {
+  border-radius: 10px !important;
+}
+.v-card__actions {
+  padding: 16px !important;
+}
+.v-btn:not(.v-btn--round).v-size--large {
+  height: 60px !important;
+}
+
+/*Header*/
+header.v-sheet.theme--light.v-toolbar.v-toolbar--flat.v-app-bar.v-app-bar--fixed {
+  border-bottom: 1px solid #223B8D !important;
+}
+.v-toolbar__content, .v-toolbar__extension {
+  padding: 0px 16px !important;
+}
+button.menu-link {
+  height: 100% !important;
+  border-radius: 0px !important;
+  color: #223B8D !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+}
+
+/*Dashboard*/
+tr:nth-child(even) {
+  background-color: #E9EBF4 !important;
+}
+td.pa-2 {
+  color: #4D4D4D !important;
+}
+
+/*New booking*/
+.v-application .primary--text {
+  color: #E9EBF4 !important;
+  caret-color: #E9EBF4 !important;
+}
+label.v-label.v-label--active.theme--light {
+  color: #ffffff !important;
+}
