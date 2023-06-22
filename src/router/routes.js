@@ -1,10 +1,16 @@
 import main from '@/containers/main/index';
 import NotFound from '@/containers/notfound/index';
+import Login from "@/containers/login/index";
 
 const routes = [
   {
     path: '/',
-    name: 'main',
+    name: 'Login',
+    component: Login,
+  },
+  {
+    path: '/dashboard',
+    name: 'dashboard',
     component: main,
     meta: { scrollToTop: true }
   },
