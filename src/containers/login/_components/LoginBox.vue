@@ -18,32 +18,13 @@
                       hide-details
                       prepend-inner-icon="mdi-lock" />
       </v-card-actions>
-      <v-row>
-        <v-col>
-          <v-card-actions>
-            <v-checkbox label="Remember me" class="ma-0" />
-          </v-card-actions>
-        </v-col>
-        <v-col>
-          <v-card-actions class="justify-end">
-            <router-link :to="resetPassword">
-              Forgot password?
-            </router-link>
-          </v-card-actions>
-        </v-col>
-      </v-row>
       <v-card-actions class="justify-center">
-        <v-btn dark elevation="8" large class="btn_width">Login</v-btn>
+        <v-btn dark elevation="8" large class="btn_width" v-on:click="login">Login</v-btn>
       </v-card-actions>
       <v-card-actions class="justify-center">
         <router-link :to="createNewAccount">
           Don't have a user? Create a new account
         </router-link>
-      </v-card-actions>
-      <v-card-actions class="justify-center guest_btn_pos">
-        <v-btn dark elevation="8"
-               large class="btn_width"
-               v-on:click="createGuestName">Join as guest</v-btn>
       </v-card-actions>
     </v-card>
   </div>
@@ -61,9 +42,10 @@ export default {
     },
   },
   methods: {
-    createGuestName() {
-      this.$router.push({ name: 'EnterName' });
-    },
+    login() {
+      // TODO: Add axios call to backend for login credentials.
+      this.$router.push({ name: 'Dashboard' });
+    }
   },
 };
 </script>

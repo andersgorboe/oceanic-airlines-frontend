@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
 .background {
-  background-image: url('./ressources/background.jpg');
+  background-image: url('./ressources/login-background.png');
   background-size: cover;
   height: 100%;
 }

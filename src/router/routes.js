@@ -1,6 +1,7 @@
 import main from '@/containers/main/index';
 import NotFound from '@/containers/notfound/index';
 import Login from "@/containers/login/index";
+import NewBooking from "@/containers/newbooking/index";
 
 const routes = [
   {
@@ -10,8 +11,14 @@ const routes = [
   },
   {
     path: '/dashboard',
-    name: 'dashboard',
+    name: 'Dashboard',
     component: main,
+    meta: { scrollToTop: true }
+  },
+  {
+    path: '/newbooking',
+    name: 'NewBooking',
+    component: NewBooking,
     meta: { scrollToTop: true }
   },
   {

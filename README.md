@@ -10,3 +10,13 @@ Run:
 ```
 run serve
 ```
+
+
+# DEPLOY
+
+npm run build
+git checkout gh-pages
+rm the scrapfiles
+copy from the dist folder
+push
+autodeploys with gha.

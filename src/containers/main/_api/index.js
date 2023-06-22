@@ -6,6 +6,6 @@ export default class ApiClient extends BaseApiClient {
   }
 
   async fetchProjects() {
-    return this.get('projects');
+    return this.get('api/v1/Activities');
   }
 }

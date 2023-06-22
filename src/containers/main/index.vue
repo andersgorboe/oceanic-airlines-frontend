@@ -1,10 +1,7 @@
 <template>
   <div>
     <TheHeader />
-    temp
-    <Filler />
-    temp
-    <Filler />
+    <BookingOverview />
     <Footer />
   </div>
 </template>
@@ -12,18 +9,18 @@
 <script>
 import { mapActions } from 'vuex';
 import store from './_store';
-import Filler from './_components/Filler';
 import TheHeader from '../page/_components/TheHeader';
 import Footer from './_components/Footer';
+import BookingOverview from "./_components/BookingOverview";
 
 export default {
   name: 'index',
   methods: {
-    ...mapActions('$_project', ['resetBaseState'])
+    ...mapActions('$_project', ['fetchProjects', 'resetBaseState'])
   },
   components: {
+    BookingOverview,
     Footer,
-    Filler,
     TheHeader
   },
   async created() {
@@ -32,7 +29,7 @@ export default {
       this.$store.registerModule(STORE_KEY, store);
     }
     try {
-      // await this.fetchProjects();
+      await this.fetchProjects();
     } catch (e) {
       throw e;
     }

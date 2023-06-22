@@ -1,27 +1,15 @@
 <template>
   <section>
-    <v-app-bar app flat color="#203e5f" dark>
+    <v-app-bar app flat color="#FFFFFF">
       <v-app-bar-nav-icon class="hidden-sm-and-up" @click="drawer = true" />
-      <v-toolbar-title class="logo display-1">
-        Oceanic Airlines
-      </v-toolbar-title>
+      <header>
+        <img src="../ressources/oceanic-airlines-logo.png" alt="Logo">
+      </header>
       <v-spacer></v-spacer>
-
+      <v-btn text link @click="goToBookingOverview" class="menu-link">Booking overview</v-btn>
+      <v-btn text link @click="goToNewBooking" class="menu-link">New booking</v-btn>
       <v-toolbar-items class="hidden-xs-only"> </v-toolbar-items>
     </v-app-bar>
-
-    <v-navigation-drawer v-model="drawer" app temporary>
-      <v-list dense>
-        <v-list-item link @click="goToProjects">
-          <v-list-item-action>
-            <v-icon>apps</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>TestTitle</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
   </section>
 </template>
 <script>
@@ -32,8 +20,11 @@ export default {
     drawer: false
   }),
   methods: {
-    goToTimeline() {
-      this.$router.push({ name: 'cv', hash: '#tidslinje' });
+    goToBookingOverview() {
+      this.$router.push({ name: 'Dashboard' });
+    },
+    goToNewBooking() {
+      this.$router.push({ name: 'NewBooking' });
     }
   }
 };
