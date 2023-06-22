@@ -37,14 +37,6 @@ const routes = [
     }
   },
   {
-    path: '/abc',
-    name: 'NotFound',
-    component: NotFound,
-    meta: {
-      title: 'Oceanic Airlines - Page not found'
-    }
-  },
-  {
     path: '*',
     name: 'NotFound',
     component: NotFound,

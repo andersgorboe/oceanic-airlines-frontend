@@ -2,7 +2,7 @@
   <section>
     <v-app-bar app flat color="#FFFFFF">
       <v-app-bar-nav-icon class="hidden-sm-and-up" @click="drawer = true" />
-      <header>
+      <header @click="goTo404Page">
         <img src="../ressources/oceanic-airlines-logo.png" alt="Logo">
       </header>
       <v-spacer></v-spacer>
@@ -20,6 +20,9 @@ export default {
     drawer: false
   }),
   methods: {
+    goTo404Page() {
+      this.$router.push({ name: 'NotFound' })
+    },
     goToBookingOverview() {
       this.$router.push({ name: 'Dashboard' });
     },
