@@ -8,7 +8,7 @@ module.exports = {
     }
   },
 
-  publicPath: '/',
+  publicPath: '/oceanic-airlines-frontend/',
 
   transpileDependencies: ['vuetify'],
 
