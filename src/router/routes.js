@@ -29,6 +29,14 @@ const routes = [
     meta: { scrollToTop: true }
   },
   {
+    path: '/404',
+    name: 'NotFound',
+    component: NotFound,
+    meta: {
+      title: 'Oceanic Airlines - Page not found'
+    }
+  },
+  {
     path: '*',
     name: 'NotFound',
     component: NotFound,
