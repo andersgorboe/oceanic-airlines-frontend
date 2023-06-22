@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div class="background row">
     <v-row>
       <v-col>
         <LoginBox />
@@ -22,5 +22,8 @@ export default {
   background-image: url('./ressources/login-background.png');
   background-size: cover;
   height: 100%;
+}
+.row {
+  margin: 0 !important;
 }
 </style>

@@ -3,3 +3,21 @@ $font-family: 'Work Sans', serif;
 $body-font-family: 'Work Sans', serif;
 $heading-font-family: 'Work Sans', serif;
 $border-radius-root: 4px;
+
+.v-sheet.v-card {
+  border-radius: 20px;
+  max-width: 400px;
+}
+.theme--dark.v-btn.v-btn--has-bg {
+  background-color: #223B8D !important;
+  border-radius: 10px !important;
+}
+.v-text-field--rounded {
+  border-radius: 10px !important;
+}
+.v-card__actions {
+  padding: 16px !important;
+}
+.v-btn:not(.v-btn--round).v-size--large {
+  height: 60px !important;
+}
