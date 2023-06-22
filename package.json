@@ -1,0 +1,87 @@
+{
+  "name": "oceanic-airlines-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@jamescoyle/vue-icon": "^0.1.0",
+    "@mdi/js": "^5.9.55",
+    "axios": "^0.19.2",
+    "core-js": "^3.4.4",
+    "sass-loader": "^8.0.2",
+    "vue": "^2.6.10",
+    "vue-carousel-3d": "^1.0.1",
+    "vue-i18n": "^8.15.3",
+    "vue-router": "^3.1.3",
+    "vuetify": "^2.2.8",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-plugin-router": "^4.1.0",
+    "@vue/cli-plugin-unit-jest": "^4.1.0",
+    "@vue/cli-plugin-vuex": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "@vue/eslint-config-airbnb": "^4.0.1",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-eslint": "^10.0.3",
+    "deepmerge": "^4.2.2",
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "eslint-plugin-vuetify": "1.0.0-beta.5",
+    "fibers": "^4.0.2",
+    "jest-junit": "^10.0.0",
+    "prettier": "^1.19.1",
+    "sass": "^1.25.0",
+    "vue-cli-plugin-vuetify": "^0.5.0",
+    "vue-template-compiler": "^2.6.10",
+    "vuetify-loader": "^1.4.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/airbnb",
+      "@vue/prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "jest": {
+    "preset": "@vue/cli-plugin-unit-jest",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  }
+}
