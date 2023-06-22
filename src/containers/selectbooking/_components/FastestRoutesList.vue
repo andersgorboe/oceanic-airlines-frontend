@@ -40,7 +40,7 @@ export default {
   methods: {
     orderRoute(id) {
       // TODO: Implement call to backend to order the item
-      console.log(id)
+      return id
     }
   },
   data: () => ({
