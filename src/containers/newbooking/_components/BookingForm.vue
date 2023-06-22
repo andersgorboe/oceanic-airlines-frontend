@@ -8,6 +8,7 @@
         <v-autocomplete
           label="Search for a city"
           :items="cities"
+          v-model="selectedFrom"
         ></v-autocomplete>
       </v-col>
       <v-col cols="4">
@@ -93,6 +94,11 @@ export default {
     findBooking() {
       // TODO: Add find booking stuff
       this.$router.push({ name: 'SelectBooking' });
+    }
+  },
+  data () {
+    return {
+      selectedFrom: null
     }
   },
   computed: {
